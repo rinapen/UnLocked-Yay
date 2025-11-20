@@ -23,7 +23,7 @@ Yay!（旧・ペントーク）のカンファレンス機能を補助し、複�
 
 ## セットアップ
 ```bash
-git clone https://github.com/<your-account>/UnLockPen-Yay.git
+git clone https://github.com/rinapen/UnLockPen-Yay.git
 cd UnLockPen-Yay
 npm install
 ```
