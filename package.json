@@ -2,29 +2,10 @@
   "type": "commonjs",
   "name": "yay-rinapen",
   "version": "1.0.0",
-  "main": "dist/main.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "npx tsc && npx webpack --config webpack.config.js",
-    "start": "node --no-deprecation dist/server.js",
-    "electron": "electron .",
-    "dist": "npm run build && electron-builder"
-  },
-  "build": {
-    "appId": "com.botcaller.app",
-    "productName": "BOT通話管理",
-    "files": [
-      "dist/**/*",
-      ".env"
-    ],
-    "extraResources": [],
-    "directories": {
-      "output": "release"
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "icon.ico",
-      "signAndEditExecutable": false
-    }
+    "start": "node --no-deprecation dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -70,8 +51,6 @@
     "css-loader": "^7.1.2",
     "ejs": "^3.1.10",
     "ejs-plain-loader": "^1.4.1",
-    "electron": "^35.1.2",
-    "electron-builder": "^26.0.12",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "https-browserify": "^1.0.0",
