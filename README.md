@@ -48,7 +48,7 @@ MONGODB_URI=mongodb+srv://<user>:<pass>@cluster.example.mongodb.net/app
 DB_USER=rinapen
 YAY_HOST=https://api.yay.space
 HOST=http://localhost:3000
-USER_AGENT=UnLockPen/1.0 (+https://github.com/...)
+USER_AGENT={device_type} {os_version} ({screen_density}x {screen_size} {model})
 API_KEY=xxxxxxxxxxxxxxxx
 AGORA_APP_ID=yyyyyyyyyyyyyyyy
 ```
