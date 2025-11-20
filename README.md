@@ -74,8 +74,6 @@ dist/                  # ビルド成果物（自動生成）
 
 ## API エンドポイント例
 - `GET /` : BOT 検索画面
-- `GET /conference/:id` : Yay カンファレンス情報を取得し表示
-- `GET /joined/:id` : 参加済みカンファレンスのビュー
 - `GET /yay-api/v2/calls/conferences/:id` : Yay API へのプロキシ
 - `GET /api/bot-api/random_bot_id` : MongoDB から BOT ID を抽選
 
