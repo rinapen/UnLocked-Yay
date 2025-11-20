@@ -1,0 +1,30 @@
+* text=auto eol=lf
+
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+*.ts   text
+*.tsx  text
+*.js   text
+*.jsx  text
+*.json text
+*.md   text
+*.yml  text
+*.yaml text
+*.ejs  text
+*.css  text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.mp3 binary
+*.m4a binary
+*.wav binary
+*.mp4 binary
+*.mov binary
+
+dist/** binary
+release/** binary
