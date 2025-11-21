@@ -2,10 +2,6 @@
   <div class="container menupanel">
     <header class="d-flex justify-content-between align-items-center mb-3">
       <div class="d-flex align-items-center">
-        <div class="icon-container me-4">
-          <img src="/assets/image/icon.png" alt="ツールアイコン" class="tool-icon red-pulse">
-          <div class="icon-glow"></div>
-        </div>
         <h2 class="text-red-cyber mb-0 glitch-effect">りなぺん</h2>
       </div>
     </header>
@@ -65,6 +61,72 @@
         </div>
       </fieldset>
 
+      <!-- 絵文字設定 -->
+      <fieldset class="mb-4">
+        <legend class="section-title">絵文字設定</legend>
+        <div class="emoji-setup-form">
+          <div class="mb-3">
+            <label for="emojiInput" class="form-label text-cyber">文字を入力</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="emojiInput" placeholder="絵文字・文字を入力してください（例：🔪、あいう、123）" maxlength="50">
+              <button class="btn btn-outline-cyber" type="button" id="addEmojiBtn">
+                <i class="fas fa-plus"></i> 追加
+              </button>
+            </div>
+            <div class="form-text text-light">
+              絵文字、ひらがな、カタカナ、数字など様々な文字を登録できます。<br>
+              複数文字を入力した場合は一文字ずつ登録されます。同じ文字は重複登録されません。
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-cyber">現在の文字一覧 <span id="emojiCount" class="badge bg-cyber-secondary">0</span></label>
+            <div class="emoji-list" id="emojiList">
+              <!-- 絵文字がここに表示されます -->
+            </div>
+          </div>
+
+          <!-- プリセットボタン -->
+          <div class="mb-3">
+            <label class="form-label text-cyber">プリセット</label>
+            <div class="preset-buttons">
+              <button class="btn btn-outline-cyber btn-sm me-2" data-preset="default">
+                <i class="fas fa-star"></i> デフォルト
+              </button>
+              <button class="btn btn-outline-cyber btn-sm me-2" data-preset="weapons">
+                <i class="fas fa-heart"></i> べるま
+              </button>
+              <button class="btn btn-outline-cyber btn-sm me-2" data-preset="animals">
+                <i class="fas fa-smile"></i> かわいい
+              </button>
+              <button class="btn btn-outline-cyber btn-sm me-2" data-preset="clear">
+                <i class="fas fa-random"></i> クリア
+              </button>
+            </div>
+          </div>
+
+          <!-- カスタムプリセット保存 -->
+          <div class="custom-preset-save mb-3">
+            <label class="form-label text-cyber">カスタムプリセット保存</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="presetNameInput" placeholder="プリセット名を入力" maxlength="20">
+              <button class="btn btn-outline-success" type="button" id="savePresetBtn">
+                <i class="fas fa-save"></i> 保存
+              </button>
+            </div>
+            <div class="form-text text-light">現在の文字一覧をプリセットとして保存できます（最大5個まで）</div>
+          </div>
+
+          <!-- 保存されたプリセット一覧 -->
+          <div class="saved-presets">
+            <label class="form-label text-cyber">保存されたプリセット</label>
+            <div class="custom-presets-list" id="customPresetsList">
+              <!-- 保存されたプリセットがここに表示されます -->
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
       <!-- 音量調整機能 -->
       <fieldset class="mb-4">
         <legend class="section-title">音量設定</legend>
@@ -104,19 +166,19 @@
           <div class="breathing-selection mb-4">
             <h5 class="text-red-cyber mb-3">呼吸法を選択してください</h5>
             <div class="breathing-buttons d-flex flex-wrap justify-content-center gap-2">
-              <button class="breathing-btn water-breathing" data-breathing="water">水の呼吸</button>
-              <button class="breathing-btn fire-breathing" data-breathing="fire">炎の呼吸</button>
-              <button class="breathing-btn wind-breathing" data-breathing="wind">風の呼吸</button>
-              <button class="breathing-btn stone-breathing" data-breathing="stone">岩の呼吸</button>
-              <button class="breathing-btn thunder-breathing" data-breathing="thunder">雷の呼吸</button>
-              <button class="breathing-btn mist-breathing" data-breathing="mist">霞の呼吸</button>
-              <button class="breathing-btn flower-breathing" data-breathing="flower">花の呼吸</button>
-              <button class="breathing-btn snake-breathing" data-breathing="snake">蛇の呼吸</button>
-              <button class="breathing-btn love-breathing" data-breathing="love">恋の呼吸</button>
-              <button class="breathing-btn beast-breathing" data-breathing="beast">獣の呼吸</button>
-              <button class="breathing-btn sound-breathing" data-breathing="sound">音の呼吸</button>
-              <button class="breathing-btn moon-breathing" data-breathing="moon">月の呼吸</button>
-              <button class="breathing-btn sun-breathing" data-breathing="sun">日の呼吸</button>
+              <button class="breathing-btn water-breathing" data-breathing="water">💧 水の呼吸</button>
+              <button class="breathing-btn fire-breathing" data-breathing="fire">🔥 炎の呼吸</button>
+              <button class="breathing-btn wind-breathing" data-breathing="wind">🌪️ 風の呼吸</button>
+              <button class="breathing-btn stone-breathing" data-breathing="stone">🗿 岩の呼吸</button>
+              <button class="breathing-btn thunder-breathing" data-breathing="thunder">⚡ 雷の呼吸</button>
+              <button class="breathing-btn mist-breathing" data-breathing="mist">🌫️ 霞の呼吸</button>
+              <button class="breathing-btn flower-breathing" data-breathing="flower">🌸 花の呼吸</button>
+              <button class="breathing-btn snake-breathing" data-breathing="snake">🐍 蛇の呼吸</button>
+              <button class="breathing-btn love-breathing" data-breathing="love">💕 恋の呼吸</button>
+              <button class="breathing-btn beast-breathing" data-breathing="beast">🐺 獣の呼吸</button>
+              <button class="breathing-btn sound-breathing" data-breathing="sound">🎵 音の呼吸</button>
+              <button class="breathing-btn moon-breathing" data-breathing="moon">🌙 月の呼吸</button>
+              <button class="breathing-btn sun-breathing" data-breathing="sun">☀️ 日の呼吸</button>
             </div>
           </div>
 

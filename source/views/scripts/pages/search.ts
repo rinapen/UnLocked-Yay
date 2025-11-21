@@ -2,7 +2,7 @@ import { setupMusicUploadHandler } from '../ui/musicUploadHandler';
 import { handleSearch } from '../handlers/handleSearch';
 import { setupEmojiConfigUI } from '../ui/emojiConfigHandler';
 
-// search.ejsページ専用の初期化
+// index.ejs (検索画面) 専用の初期化
 document.addEventListener('DOMContentLoaded', () => {
   // 音楽アップロードハンドラーを初期化
   setupMusicUploadHandler();

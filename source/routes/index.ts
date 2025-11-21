@@ -5,9 +5,13 @@ dotenv.config();
 
 const router = express.Router();
 
-router.get('/', (req: Request, res: Response) => {
-    res.render('search', {
-        title: 'りなぺんの嫌がらせツール',
+router.get('/', (_req: Request, res: Response) => {
+    res.redirect('/home');
+});
+
+router.get('/home', (_req: Request, res: Response) => {
+    res.render('index', {
+        title: 'UnLocked',
     });
 });
 

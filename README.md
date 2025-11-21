@@ -73,7 +73,7 @@ dist/                  # ビルド成果物（自動生成）
 ```
 
 ## API エンドポイント例
-- `GET /` : BOT 検索画面
+- `GET /home` : BOT 検索画面（`/` へアクセスすると `/home` にリダイレクト）
 - `GET /yay-api/v2/calls/conferences/:id` : Yay API へのプロキシ
 - `GET /api/bot-api/random_bot_id` : MongoDB から BOT ID を抽選
 

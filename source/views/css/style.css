@@ -773,89 +773,6 @@ body {
   padding: 0.5rem 1rem;
 }
 
-<<<<<<< HEAD
-/* ツールアイコンのスタイリング */
-.tool-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  border: 3px solid #8b0000;
-  box-shadow: 
-    0 0 12px rgba(139, 0, 0, 0.4),
-    0 0 20px rgba(139, 0, 0, 0.2),
-    inset 0 0 8px rgba(139, 0, 0, 0.2);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: 
-    drop-shadow(0 0 8px rgba(139, 0, 0, 0.6))
-    brightness(1.05)
-    contrast(1.1);
-  position: relative;
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-}
-
-.tool-icon::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(45deg, #8b0000, #a52a2a, #8b0000, #654321);
-  border-radius: 15px;
-  z-index: -1;
-  animation: iconBorderGlow 4s linear infinite;
-  opacity: 0.7;
-}
-
-.tool-icon:hover {
-  transform: scale(1.1) rotate(3deg);
-  box-shadow: 
-    0 0 18px rgba(139, 0, 0, 0.5),
-    0 0 30px rgba(139, 0, 0, 0.3),
-    inset 0 0 12px rgba(139, 0, 0, 0.3);
-  filter: 
-    drop-shadow(0 0 12px rgba(139, 0, 0, 0.8))
-    brightness(1.1)
-    contrast(1.2);
-}
-
-@keyframes iconBorderGlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* アイコンコンテナのスタイリング */
-.icon-container {
-  position: relative;
-  display: inline-block;
-}
-
-.icon-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(139, 0, 0, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: iconGlowPulse 4s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: -1;
-}
-
-@keyframes iconGlowPulse {
-  0% { 
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.4;
-  }
-  100% { 
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.8;
-  }
-}
-
 /* 赤いサイバーテーマの追加スタイル */
 .text-red-cyber {
   color: #cd5c5c;
@@ -870,17 +787,6 @@ body {
 .border-red-cyber {
   border: 2px solid #8b0000;
   box-shadow: 0 0 8px rgba(139, 0, 0, 0.3);
-}
-
-/* アニメーション効果 */
-@keyframes redPulse {
-  0% { box-shadow: 0 0 5px rgba(139, 0, 0, 0.4); }
-  50% { box-shadow: 0 0 15px rgba(139, 0, 0, 0.6), 0 0 25px rgba(139, 0, 0, 0.4); }
-  100% { box-shadow: 0 0 5px rgba(139, 0, 0, 0.4); }
-}
-
-.red-pulse {
-  animation: redPulse 4s infinite;
 }
 
 /* グリッチ効果 */
