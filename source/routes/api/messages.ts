@@ -45,10 +45,10 @@ export const ERROR_MESSAGE = {
             code: 2003,
             message: "Post not found.",
         },
-        userNotFound: (bot_id: string) => ({
+        userNotFound: {
             code: 2004,
-            message: `User with botId ${bot_id} not found.`,
-        }),
+            message: "User not found.",
+        },
     },
     AUTHORIZATION: {
         tokenUpdateFailed: {
