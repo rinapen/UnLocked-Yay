@@ -13,12 +13,10 @@ export default async function handleShingekiMode(bot_id, rtmChannel: RtmChannel,
 
     firstTrack.on("source-state-change", async (state) => {
         if (state === "stopped") {
-        // 🔁 カスタム音楽またはデフォルトのhonkowa.m4aをループで再生
         const musicManager = MusicManager.getInstance();
         const musicUrl = musicManager.getMusicUrl();
         await playTrack(musicUrl, true, 1000, rtcClient);
 
-        // カスタム絵文字を取得
         const emojiManager = EmojiConfigManager.getInstance();
         const emotes = emojiManager.getEmojis();
         const text = "話をしねえじゃねえか！ふざけんなよ！";
@@ -27,15 +25,13 @@ export default async function handleShingekiMode(bot_id, rtmChannel: RtmChannel,
 
         setInterval(() => sendMessage(bot_id, text[charIndex++ % text.length], rtmChannel), 100);
         setInterval(() => sendEmoji(emotes[emoteIndex++ % emotes.length], rtmChannel),100);
-      setInterval(() => rtmChannel.sendMessage({ text: `requestLiftAudioMute` }), 50);
-        // 📩 メッセージ送信
+        setInterval(() => rtmChannel.sendMessage({ text: `requestLiftAudioMute` }), 50);
         setTimeout(() => {
             sendMessage(bot_id, "موتوا أيها الأوغاد", rtmChannel);
         }, 300);
         }
     });
 
-  // 🔄 RTMイベント（そのまま）
   rtmChannel.on("ChannelMessage", async (message, memberId, messageProps) => {
     const msgText = message.text;
     if (typeof msgText === "string") {
