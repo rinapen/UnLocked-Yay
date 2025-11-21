@@ -2,10 +2,6 @@ import { RtmChannel } from "agora-rtm-sdk";
 import { IAgoraRTCClient } from "agora-rtc-sdk-ng";
 import { AgoraActionManager } from "../../utils/agoraActionManager";
 
-function getRandomElement<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
 export async function handleJakiMode(rtcClient: IAgoraRTCClient, rtmChannel: RtmChannel, botId: string) {
   const emojis = [
     "⚔️","🗡️","🔪","🪓","🤪","😈","🥴","🤯","🤑","😵",
