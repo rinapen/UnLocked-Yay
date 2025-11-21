@@ -23,8 +23,12 @@ export const ERROR_MESSAGE = {
             code: 1003,
             message: "conference_id is required.",
         },
-        invalidQueryParams: {
+        callIdOrUuidRequired: {
             code: 1004,
+            message: "call_id, uuid, and bot_id are required.",
+        },
+        invalidQueryParams: {
+            code: 1005,
             message: "Invalid query parameters.",
         },
     },
