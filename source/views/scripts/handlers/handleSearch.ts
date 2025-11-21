@@ -1,6 +1,5 @@
 import { displayConferenceDetails } from './displayConferenceDetails';
 import { ConferenceCall } from '../agora/types';
-import { setupMusicUploadHandler } from '../ui/musicUploadHandler';
 
 const result = document.getElementById('result') as HTMLElement;
 const idInput = document.getElementById('idInput') as HTMLInputElement;
@@ -31,8 +30,6 @@ function showNoCallMessage(message?: string, is404: boolean = false): void {
 }
 
 export async function handleSearch(): Promise<void> {
-  // 音楽アップロードハンドラーを初期化
-  setupMusicUploadHandler();
   
   await displayLoadingMessage();
 

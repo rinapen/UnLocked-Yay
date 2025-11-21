@@ -1,16 +1,10 @@
-import { setupMusicUploadHandler } from '../ui/musicUploadHandler';
 import { handleSearch } from '../handlers/handleSearch';
 import { setupEmojiConfigUI } from '../ui/emojiConfigHandler';
 
-// index.ejs (検索画面) 専用の初期化
 document.addEventListener('DOMContentLoaded', () => {
-  // 音楽アップロードハンドラーを初期化
-  setupMusicUploadHandler();
 
-  // 絵文字設定UIを初期化
   setupEmojiConfigUI();
 
-  // 検索ボタンのイベントリスナーを設定
   const searchButton = document.getElementById('searchButton');
   if (searchButton) {
     searchButton.addEventListener('click', () => {
