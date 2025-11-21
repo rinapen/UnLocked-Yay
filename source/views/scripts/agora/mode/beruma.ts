@@ -10,7 +10,7 @@ export default async function handleShingekiMode(bot_id, rtmChannel: RtmChannel,
   const sounds = ["/assets/audio/beruma/scream.wav"];
   agoraManager.handleKickAndMuteSound(sounds);
   
-  const firstTrack = await agoraManager.playTrack("/assets/audio/beruma/first.wav", false);
+  const firstTrack = await agoraManager.playTrack("/assets/audio/beruma/first.wav");
   firstTrack.on("source-state-change", async (state) => {
     if (state === "stopped") {
 
